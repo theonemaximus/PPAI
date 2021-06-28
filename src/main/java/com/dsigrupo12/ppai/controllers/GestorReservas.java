@@ -10,7 +10,7 @@ import com.dsigrupo12.ppai.entities.EstadoReserva;
 
 
 @Controller
-@RequestMapping("/reservas")
+@RequestMapping("/")
 public class GestorReservas {
 
 	/*private EscuelaService escuelaService;

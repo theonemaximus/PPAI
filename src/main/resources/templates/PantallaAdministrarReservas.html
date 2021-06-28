@@ -1,45 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1470, initial-scale=1.0">
-    <title>Pantalla Administrar Reservas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
 <body>
-    <div>
-        <header class="hero is-primary">
-            <div class="hero-body">
-                <p class="title">
-                    Administrar Reservas
-                </p>
+
+
+    <header class="hero is-link">
+        <div class="hero-body">
+            <h2 class="title">
+                Registro de reservas de visitas guiadas
+            </h2>
+        </div>
+    </header>
+
+    <div class="container">
+        <form action="" class="pt-5">
+
+            <div class="field">
+                <label class="label">Seleccione escuela:</label>
+                <div class="control">
+                    <div class="select">
+                        <select>
+                            <option>Seleccione opción</option>
+                            <option>Escuela 1</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-        </header>
-        <main class="container is-fluid">
-            <div class="pt-5">
-            	<form action="registrarReserva" method="post">
-	                <div class="field">
-	                    <label for="escuela" class="label">Escuela:</label>
-	                    <div class="control">
-	                        <div class="select is-info">
-	                            <select id="escuela" name="escuela">
-	                            </select>
-	                        </div>
-	                    </div>
-                        <div class="field">
-                            <label for="" class="label"></label>
-                            <div class="control">
-                                <input type="text" class="is-info">
+
+            <div class="field">
+                <label class="label">Ingresar la cantidad de visitantes:</label>
+                <div class="control">
+                    <input class="input" type="number" placeholder="0">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Seleccione sede:</label>
+                <div class="control">
+                    <div class="select">
+                        <select>
+                            <option>Seleccione opción</option>
+                            <option>Sede 1</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Seleccione tipo visita:</label>
+                <div class="control">
+                    <div class="select">
+                        <select>
+                            <option>Seleccione opción</option>
+                            <option>Completa</option>
+                            <option>Exposición</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container is-widescreen">
+                <div class="notification is-info">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><abbr title="Position">Exposición</abbr></th>
+                                <th>Publico Destino</th>
+                                <th>Horarios habilitados</th>
+                                <th>Seleccionar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1234</td>
+                                <td>Destinado a jovenes entre 13 y 30años</td>
+                                <td>Lunes a Viernes de 14hs a 16hs</td>
+                                <td><input type="checkbox" id="Select1" name="Select1" value=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="field">
+                <label class="label">Ingresar fecha y hora de la visita:</label>
+                <div class="control">
+                    <input class="input" type="date" placeholder="0">
+                    <input class="input" type="time" placeholder="0">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Seleccione los guias:</label>
+                <div class="control">
+
+                    <div class="columns">
+                        <div class="column is-narrow">
+                            <div class="select is-multiple">
+                                <select multiple size="8">
+                                    <option value="Identificaor1">Facundo Almada</option>
+                                    <option value="Identificaor2">Jos&eacute; Suarez</option>
+                                    <option value="Identificaor3">Adriana Rosa</option>
+                                    <option value="Identificaor4">Ana Vel&eacute;z</option>
+                                    <option value="Identificaor5">Ren&eacute; Caceres</option>
+                                    <option value="Identificaor6">Ju&aacute;n Bobadilla</option>
+                                    <option value="Identificaor7">Matias Fisogni</option>
+                                    <option value="Identificaor8">Laura Cueva</option>
+                                    <option value="Identificaor9">Ju&aacute;n Segovia</option>
+                                    <option value="Identificaor10">Marta S&aacute;nchez</option>
+                                    <option value="Identificaor11">Matias Rolando</option>
+                                    <option value="Identificaor12">Felipe Carou</option>
+                                </select>
                             </div>
                         </div>
-	                </div>
-	            </form>
+                        <div class="column is-narrow">
+                            <button class="button is-small is-fullwidth">&gt;&gt;</button>
+                            <button class="button is-small is-fullwidth">&lt;&lt;</button>
+                        </div>
+                        <div class="column is-narrow">
+                            <div class="select is-multiple">
+                                <select multiple size="8">
+                                    <option value="Argentina">Jos&eacute; Bernardi</option>
+                                    <option value="Bolivia">Natalia Jimenez</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </main>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Confirmar</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light">Cancelar</button>
+                </div>
+            </div>
+
+        </form>
     </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <b>Catedra: </b>Diseño de Sistemas. <b>Grupo N°: </b>12 <br>
+                <b>Integrantes: </b>
+                Garz&oacute;n Pablo, Garz&oacute;n Sergio, 
+                Ghizzoni Claudio ,Maximo Mer&aacute;s,
+                Guti&eacute;rrez Emiliano Andr&eacute;s, Mer&aacute;s M&aacute;ximo
+                Menendez Agust&iacute;n, Sosa Federico
+            </p>
+        </div>
+    </footer>
+
 </body>
 
 </html>
