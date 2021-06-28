@@ -1,0 +1,32 @@
+server:
+  port: 8081
+  error:
+    whitelabel:
+      enabled: false
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:h2:mem:testdb #jdbc:h2:~/Desktop/dbTest
+  jpa:
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:mysql://localhost/ppai?createDatabaseIfNotExist=true
+    username: 
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
